@@ -50,6 +50,7 @@ namespace LeetCode
             {
                 cnt[(int) (c - 'A')]++;
             }
+            // 20! > long.MaxValue. So chars length should be less than 20. 
             Dictionary<int, long> perCnt = new Dictionary<int, long>();
             perCnt.Add(0, 1);
             long per = 1;
