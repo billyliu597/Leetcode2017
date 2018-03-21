@@ -5,7 +5,11 @@ using System.Collection.Generic;
 
 public class Solution {
     bool Helper(IList<double> list, double target){
-        if (list.Count == 1){
+        if (list.Count < 0){
+            return false;
+        }
+        
+        else if (list.Count == 1){
             return Math.Abs(list[0] - target) <= 1e-6;
         }
         
@@ -14,8 +18,7 @@ public class Solution {
                 if (i == j){
                     continue;
                 }
-                
-                
+                 
                 // A hard copy of the list.
                 IList<double> copyList = list.ToList();
                 
